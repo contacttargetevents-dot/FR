@@ -25,22 +25,6 @@ This repository now contains a pilot Next.js storefront wired to WooCommerce RES
    npm run dev
    ```
 
-## Vercel Deployment Checklist
-Set the following **Project Environment Variables** in Vercel before deploying:
-- `WOOCOMMERCE_URL`
-- `WOOCOMMERCE_CONSUMER_KEY`
-- `WOOCOMMERCE_CONSUMER_SECRET`
-
-If these are missing, pilot pages now fail gracefully and render empty states instead of crashing the build.
-
-
-## If Vercel still shows old errors
-- Check deploy commit SHA in Vercel logs.
-- If it is older than the latest fix commit, trigger a new deployment from the newest commit on your branch.
-- Common old errors this repo has already fixed:
-  - `eslint-config-next/core-web-vitals` import path mismatch
-  - build-time prerender crash when Woo env vars are missing
-
 ## Notes
 - Credentials are intentionally read from environment variables and are **not committed**.
 - Cart is localStorage-based only for pilot speed; replace with Woo Store API cart for production parity.
