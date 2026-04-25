@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { ProductCard } from '@/components/ProductCard';
 import { getProducts } from '@/lib/woocommerce';
 
